@@ -1,0 +1,19 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-appearance: 0;
+     -moz-appearance: 0;
+          appearance: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(30, 30, 30);
+  color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+}/*# sourceMappingURL=style.css.map */
