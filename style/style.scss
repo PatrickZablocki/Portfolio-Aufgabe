@@ -13,4 +13,183 @@ body{
     color: white;
     overflow: hidden;
     overflow-y: scroll;
-}
+
+    header {
+        text-align: center;
+    }
+    
+    .head-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .head-container h2 {
+        display: flex;
+        font-size: 3rem;
+        color:cyan;
+    }
+    
+    .head-container ul,
+    .head-container li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .head-container li:not(:last-child) a {
+        margin-right: 10px;
+    }
+
+    .head-container a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .head-container li a {
+        margin: 0 50px;
+    }
+    
+    .head-container a:hover {
+        transition: 2s;
+        color: cyan;
+    }
+    main{
+        background-color: #2E3744;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .Main-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            color: white;
+            font-size: 1rem;
+            margin-top: 200px;
+            h2{
+                font-size:2rem;
+                color: white;
+            }
+
+                .circle{
+                    height: 600px;
+                    width: 600px;
+                    max-height: 80vw;
+                    max-width: 80vw;
+                    overflow: hidden;
+                    border-radius:50% ;
+                    border: 20px solid #297AE3;
+                    display: flex;
+                    justify-content: center;
+                    align-items:start;
+                        }
+                        .circle img{
+                            width: 100%;
+                        }
+                .Home{
+                    display:block;
+                    justify-content: end;
+                    overflow: hidden;
+                    font-size: 1.5rem;
+                    align-items: center;
+                    margin-right: 150px;
+                    margin-bottom: 130px;
+                        h2{
+                            margin-bottom: 20px;
+                            overflow: hidden;
+                            font-size: 3rem;
+                        }
+                        p{
+                            overflow: hidden;
+                            font-size: 2rem;
+                        }
+                }
+        }
+        .container{
+        overflow: hidden;
+        }
+            .container .text{
+                position: relative;
+                color: cyan;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            .container .text.first-text{
+                color: #fff;
+            }
+            .text.sec-text:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-left: 2px solid #4070F4;
+                background-color: transparent;
+                animation: animate 3.5s steps(12) infinite;
+            }
+            @keyframes animate{
+                40%, 60%{
+                    left:calc(100% + 4px);
+                }
+                100%{
+                    left: 0%;
+                }
+            }
+    }
+    #FAQ{
+        background: #232933;
+        min-height: 100vh;
+        width:100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            h2{
+                font-size: 3rem;
+                color: white;
+            }
+        .About{
+            max-width: 1000px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #2799ca;
+            cursor: pointer;
+            color: white;
+        }
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question h3{
+            font-size: 1.8rem;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.4s ease;
+        }
+        .answer p{
+            padding-top: 1rem;
+            line-height: 1.6;
+            font-size: 1.4rem;
+        }
+        .About.active .answer{
+            max-height: 300px;
+            animation: fade 1s ease-in-out;
+        }
+        .About.active svg{
+            transform: rotate(180deg);
+        }
+        svg{
+            transition: transform 0.5s ease-in;
+        }
+    }
+
+    }
